@@ -1,23 +1,2661 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
-{% block title %}{{ title }}{% if theme.index_with_subtitle and subtitle %} – {{ subtitle }}{% endif %}{% endblock %}
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/favicon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/uploads/favicon.png?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="To Be A Coder">
+<meta property="og:url" content="https://x20a.com/index.html">
+<meta property="og:site_name" content="To Be A Coder">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Freedom">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+  <link rel="canonical" href="https://x20a.com/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>To Be A Coder</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">To Be A Coder</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-th&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2022/06/17/%E5%8A%A0%E7%BC%AA%E5%9C%A8%E8%AF%BA%E8%B4%9D%E5%B0%94%E9%A2%81%E5%A5%96%E6%99%9A%E5%AE%B4%E4%B8%8A%E7%9A%84%E6%BC%94%E8%AE%B2/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2022/06/17/%E5%8A%A0%E7%BC%AA%E5%9C%A8%E8%AF%BA%E8%B4%9D%E5%B0%94%E9%A2%81%E5%A5%96%E6%99%9A%E5%AE%B4%E4%B8%8A%E7%9A%84%E6%BC%94%E8%AE%B2/" class="post-title-link" itemprop="url">加缪在诺贝尔颁奖晚宴上的演讲</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2022-06-17 20:00:49" itemprop="dateCreated datePublished" datetime="2022-06-17T20:00:49+08:00">2022-06-17</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">杂文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2022/06/17/%E5%8A%A0%E7%BC%AA%E5%9C%A8%E8%AF%BA%E8%B4%9D%E5%B0%94%E9%A2%81%E5%A5%96%E6%99%9A%E5%AE%B4%E4%B8%8A%E7%9A%84%E6%BC%94%E8%AE%B2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/06/17/加缪在诺贝尔颁奖晚宴上的演讲/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>加缪在诺贝尔颁奖晚宴上的演讲</p>
+<p>1957年12月10日</p>
+</blockquote>
+<blockquote>
+<p>按照惯例，诺贝尔奖金颁奖仪式结束后，在斯德哥尔摩市政厅会举行盛大的宴会，加缪在此发表了这篇演讲。</p>
+</blockquote>
+<p>尊敬的国王和皇后陛下，尊敬的王室成员，女士们，先生们：</p>
+<p>秉承自由精神的贵学院慷慨授予我这份殊荣，我自认我的成就远远配不上它的分量，所以更是由衷地心怀感激。所有人都渴望得到认可，艺术家就更为如此。我也是一样。只有当我将你们的决定所产生的影响与真实的我进行比较之后，我才真正理解你们何以作了这样一个决定。一个尚且年轻的人，除了疑惑一无所有，他的作品尚未成型，并且习惯于在工作中孤独地生活，对各种示好也退避三舍，对于这样一个离群索居的人来说，突然被逮到，并抛置于这耀眼的聚光灯下，又怎么能不感到一种恐慌呢？当欧洲其他的作家，哪怕是其中最伟大的一些作家，都被迫保持沉默，当他的故土，正遭受着无止境的苦难，他将以怎样的心情来接受这份荣誉呢？</p>
+<p>我就经历了这种内心的惶恐与不安。为了重新获得平静，我只能接受这份命运慷慨的馈赠。既然我的成就无法与这份奖项匹配，我便只能倚赖那份支撑着我人生的信念，即便在最艰难的境况下也未曾抛却我的那份信念：那就是我对我的艺术以及对作家这一角色的看法。让我怀着感激和友好的心情，对大家尽可能简短地表达一下这个想法。</p>
+<p>于我而言，没有艺术，我便无法存活。但我从没有把这份艺术置于一切之上，相反，它之所以对我而言不可或缺，正是因为它与所有人紧紧相连，并且允许像我这样的一个人能和大家一样生活下去。艺术在我看来并不是一场孤独的狂欢。艺术是一种手段，它以其特有的方式呈现了人类共同的苦难与欢乐，从而感动了大多数的人。所以它迫使艺术家不再自我孤立，使其屈从于一种最为质朴、最为普世的真理。而通常情况下，那个自认与众不同而选择艺术生涯的人很快就会发现，只有承认自己与众生的共性，他的艺术和他的独特才能从中得到滋养。正是在这种自身与他者不断的往来中、在与他不可搁置的美以及不可抽离的群体的交往之中，艺术家得到了自我锤炼。这也是为什么真正的艺术家不会蔑视任何东西；他们要求自己必须理解一切，而不是评判一切。如果他们必须在这个世界上选择一个阵营，那他们或许只能属于尼采的伟大言论中所构建的那种社会：一个由创造者而不是评判者来统治的社会，无论这里的创造者是劳动人民还是知识分子。</p>
+<p>同样地，作家这一角色也被赋予了艰难的职责。身为作家，在如今这个年代，他不该为制造历史的人服务，他应该为承受历史的人服务。否则，他将被孤立，也将失去他的艺术。一个作家，若是与独裁者为伍，那么即便独裁者有千军万马与之同行，他也依然无法摆脱那种孤独。但世界另一头，一个被遗弃在屈辱中的无名之囚，他的沉默却足以一次又一次将作家从这种孤独的流放中拯救出来，只要他在享有自由权利的同时，始终不忘这种沉默，并以艺术的方式来使这种沉默发出声响。</p>
+<p>我们中任何人都没有伟大到足以承担这一使命。但是在他一生的境遇中，无论是门庭冷落还是扬名一时，无论是被压制于暴政的桎梏之下还是拥有一时的言论自由，作家只有忠心耿耿竭尽所能地为真理和自由服务，他的职业才能因此变得伟大，他才能得到民众发自肺腑的正名。作家的使命，就是团结尽可能多的人，这个使命不应屈服于谎言和奴役，因为在谎言和奴役统治的土地上，处处囚禁着孤独的灵魂。无论我们作为个人有着怎样的弱点，我们职业的高贵却永远扎根在两个并不容易坚守的承诺里：对于知晓的事，绝无谎言；对于任何压迫，反抗到底。</p>
+<p>在二十多年的荒诞历程中，孤立无援的我和同代人一样，迷失在时代的跌宕变迁中， 仅靠内心隐隐的一种感觉支撑着：在当今这个世界，写作是一种光荣，因为这一行为肩负使命，并迫使你不仅仅去写作。它尤其迫使我按我自己的方式，以我的一己之力，与所有和我一样经历过那段历史的人一起去承担起我们共有的那种痛苦与希冀。这些人，出生于第一次世界大战之初；希特勒政权建立和最初的革命浪潮掀起时，他们又正值二十多岁。接着，像是要使他们的经历更加完整，他们又经历了西班牙内战、第二次世界大战，他们经历了那个满目疮痍、遍地集中营和牢狱的欧洲，而如今，正是他们这些人，又要在毁灭性核武器的威胁下，抚育他们的下一代，完成他们的使命。我想，没有任何人有权利要求他们乐观。我甚至主张，在与他们不断斗争的同时，我们应该理解他们的所作所为：他们只是因为与日俱增的绝望，而做出了耻辱之举，并且堕入了这个时代所盛行的虚无主义。但是，不论是在我们国家，还是在整个欧洲，我们中的大多数，仍然拒绝虚无主义，仍在寻找一种正义。我们需要锻造一种在多事之秋生活的艺术，为的是能够涅槃重生，然后坦然地与那历史进程中的死亡本能作斗争。</p>
+<p>或许，每代人都自信肩负着重塑世界的使命。然而，我们这代人却知道，我们对此无能为力。 但是，我们这代人的使命或许更伟大，因为我们的使命是：不让这个世界分崩离析。我们继承的，是一段残破的历史，它混杂着革命的失败、走火入魔的科技、已经死去的诸神和穷途末路的意识形态，纵使在这样的时代，任何平庸的势力都能让这个世界毁于一旦，但这种平庸的势力只有否定的力量，在理智自甘堕落成仇恨与压迫的奴隶时，这种否定的力量并不能教会我们这代人在内心和外部世界重新修建起一点点能够给予生命和死亡以尊严的东西。在这样一个每时每刻都有可能崩塌的世界面前，我们伟大的裁判官们建立的恐怕永远是死亡的国度，而我们这代人知道，我们应该在与时间疯狂赛跑的同时，在不同民族之间，建立起一种不屈从于任何奴役的和平，重新调和工作与文化的关系，并与全世界所有人携起手来，构建一种联盟。没有人能够确定我们这代人是否能完成这项浩大的任务，但是，我们确定的是，他们已经遍布在全世界各个角落，为真理和自由而战，并时刻准备着为之赴死，无怨无悔。正是这些人，值得我们尊敬和鼓励，无论在何时何地——尤其是在他们牺牲的地方。总之，我想把你们刚刚授予我的荣耀转献给他们，相信你们也会感同身受。</p>
+<p>与此同时，在说了作家职业的高尚之后，我想要还原作家的真实模样，除了和他的战友们一起共享的身份之外，他没有其他身份。他既脆弱又固执；他无法永远保持公正，却又热切追寻着公正；在所有人的视线中，他默默构建着自己的作品，既不以之为耻，也不引以为傲，他永无止息地在痛苦与美好中被撕扯，最终是为了从他这双重的存在中，提炼出他固执地想要在历史的废墟中创建起来的东西。这么说完，谁还能期待他给出现成的答案和完美的道德信条呢？真理是神秘的、难以捕捉的，总是有待征服的。自由固然是令人振奋的，但实践起来也同样是危险的、艰难的。我们必须走向这两个目标，艰苦卓绝、征途漫漫，却坚定不移、矢志不渝。由此，哪个有着自知之明的作家还敢自诩为美德的传道者？至于我，我必须再说一次，这完全不是我的身份。我从来未能放弃生命中的光和幸福，不能放弃自由的生活，这些东西自小就伴随着我成长。这种怀旧之情虽然也让我犯了不少错误，却无疑也帮助我更好地理解了我的职业，帮助我毫不犹豫地站在那些沉默的人身边，那些人，除了从回忆中追索那一点点短暂而自由的幸福，在这个世上便无以为继。</p>
+<p>现在，我向大家还原了真实的我，你们知道了我的浅薄有限，知道了我得益于他人，也知道了我艰难的信仰，作为结束，我终于能更自如地表达诸位授予我这份荣誉的广博与慷慨，也能更自如地对你们说，我接受这份荣誉，并要把它视作为一种致敬，向所有和我一样经历了战斗，却没有获得任何殊荣，只是饱经了苦难与迫害的人致敬。最后，我要发自肺腑地对诸位表示感谢，并公开地，以感恩的心，向你们作出一个古老的承诺，任何一个真正的艺术家每天都会在静默中向自己作出的古老的承诺，那便是——忠诚。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2020/03/01/%E6%83%B3%E8%A7%81%E4%BD%A0/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/03/01/%E6%83%B3%E8%A7%81%E4%BD%A0/" class="post-title-link" itemprop="url">想见你</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-01 00:51:49" itemprop="dateCreated datePublished" datetime="2020-03-01T00:51:49+08:00">2020-03-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-26 10:23:11" itemprop="dateModified" datetime="2019-03-26T10:23:11+08:00">2019-03-26</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">杂文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/03/01/%E6%83%B3%E8%A7%81%E4%BD%A0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/01/想见你/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>TRACK 01.想念离我如此之近，才发现你多遥不可及。</p>
+</li>
+<li><p>TRACK 02.你的出现，就足够占据我余生的那些年。</p>
+</li>
+<li><p>TRACK 03.失去了你的时间里面，我的世界从未往前。</p>
+</li>
+<li><p>TRACK 04.所有的离别，都是我在练习失去你。</p>
+</li>
+<li><p>TRACK 05.要我怎么穿越时间，重新和你相识一遍。</p>
+</li>
+<li><p>TRACK 06.在想念的时候，就把温柔的自己都用完了。</p>
+</li>
+<li><p>TRACK 07.慢慢把自己搁浅在无法拼凑的昨天。</p>
+</li>
+<li><p>TRACK 08.有些喜欢能够穿越时间，依然来到你面前。</p>
+</li>
+<li><p>TRACK 09.你一不小心，就掉落进我的梦里。</p>
+</li>
+<li><p>TRACK 10.我宁愿这样记得，你从未离开过我的世界。</p>
+</li>
+<li><p>TRACK 11.如果我不再如初，你是否会爱我如故。</p>
+</li>
+<li><p>TRACK 12.借我一点你的时光，许我一点美好难忘。</p>
+</li>
+<li><p>TRACK 13.也不是所有碎片都能拼凑，就像那些昨天无法重新拥有。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2019/03/10/Ubuntu-Java11%E5%AE%89%E8%A3%85/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/10/Ubuntu-Java11%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">Ubuntu Java11安装</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-10 15:12:11" itemprop="dateCreated datePublished" datetime="2019-03-10T15:12:11+08:00">2019-03-10</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/10/Ubuntu-Java11%E5%AE%89%E8%A3%85/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/10/Ubuntu-Java11安装/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>作为一个激进主义者，开始尝试使用Ubuntu 18.04和Java11，记录下Oracle Java 11在机器上的安装步骤。</p>
+<h3 id="添加PPA"><a href="#添加PPA" class="headerlink" title="添加PPA"></a>添加PPA</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add-apt-repository ppa:linuxuprising/java</span><br><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>对于Ubuntu 18.04及更高版本，可以跳过apt-get update，它会在添加PPA后完成。</p>
+<h3 id="安装Oracle-JDK"><a href="#安装Oracle-JDK" class="headerlink" title="安装Oracle JDK"></a>安装Oracle JDK</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install oracle-java11-installer</span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove oracle-java11-installer</span><br></pre></td></tr></table></figure>
+<p>然后根据提示选择列表里我们需要的版本，切换它为默认的Java环境</p>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br><span class="line">JAVA_HOME=<span class="string">&quot;/usr/lib/jvm/java-11-oracle&quot;</span></span><br><span class="line"><span class="built_in">source</span> /etc/environment</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$JAVA_HOME</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2019/01/07/%E9%9D%92%E6%98%A5%E4%B8%8D%E8%B4%A5%E5%90%8E%E8%AF%AD/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/07/%E9%9D%92%E6%98%A5%E4%B8%8D%E8%B4%A5%E5%90%8E%E8%AF%AD/" class="post-title-link" itemprop="url">青春不败后语</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-07 16:51:49" itemprop="dateCreated datePublished" datetime="2019-01-07T16:51:49+08:00">2019-01-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">杂文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/01/07/%E9%9D%92%E6%98%A5%E4%B8%8D%E8%B4%A5%E5%90%8E%E8%AF%AD/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/07/青春不败后语/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>青春不败似乎也是一个对我在上学时期影响蛮大的韩综，每次结尾的语录都很是有感觉。</p>
+</blockquote>
+<ul>
+<li><p>E01 青春就是在心中拥抱光芒 为了发现隐藏着的光芒 今天也努力的生活下去</p>
+</li>
+<li><p>E02 青春啊 如果对前面的路好奇的话 向先旅行人生的人请教吧 不是因为有路我才走 而是因为我走了才有了路</p>
+</li>
+<li><p>E03 所谓青春 就是感受到流汗的温暖 还有 了解比体温更温暖的心灵的温度</p>
+</li>
+<li><p>E04 青春啊… 经验不是学的 而是用身体感受的 从而如果比起后悔看到希望的话 你就是青春</p>
+</li>
+<li><p>E05 青春啊 在人生中找某一种珍贵的东西吗? 那绝不是用眼能够看到的 也不是用手能够触摸的 而只是会深刻在心里…</p>
+</li>
+<li><p>E06 所谓的青春 就是尽管有很多不足之处 也不会感觉不好意思… 遇见别人 遇见朋友 遇见生活 都是个学习的过程</p>
+</li>
+<li><p>E07 所谓的青春 就是在生活中碰到书本上所学到的某事某物 还有… 一两个自己的感受 我们今天又度过了人生中最精彩、最宝贵的一些时光 这都是生活中所要经历的</p>
+</li>
+<li><p>E08 对于她们 所谓的青春 所谓的人生 青春的热情 老年的年龄 都将成为她们生命中的一个齿轮 让她们的人生走上正确的轨道 让她们尝到人生的酸甜苦辣</p>
+</li>
+<li><p>E10 青春就是 置身于风景美丽的绝境中要向着何处 还没领悟过来的那一瞬间 度过着多么美丽的时光 现在环视一下周围的风景吧</p>
+</li>
+<li><p>E11 把那些遗憾的事情丢掉 从今天起就会收到一个崭新的365天 虽然祝福时总是天天快乐 但困难时我们会用力克服 因为青春不败…</p>
+</li>
+<li><p>E12 青春就是… 虽然生活中没有正确答案 但一个人走不了多远 试试互相紧抱在一起 试试让心脏不停狂跳 因为有一起记住这美丽瞬间的人 青春就会永存…</p>
+</li>
+<li><p>E13 人生总会有冬天来到 对有些人是寒冷的冬天 对有些人是雪花一样的灿烂回忆 一起的时候发光的青春的力量 我们收到一个礼物 可战胜寒冷冬天的回忆</p>
+</li>
+<li><p>E14 人生该学的不是学业 是毫无保留的爱 是毫无保留的被爱 我们会继续这样爱着 也学着爱的方法</p>
+</li>
+<li><p>E15 所谓青春 包含着太多的光彩 所以不知道该用哪种颜色来表现 不过我们今天也为了转瞬即逝的精彩的青春 通过质朴的大自然,我们拥有了那一抹绿色</p>
+</li>
+<li><p>E16 青春之所以耀眼 是因为可以给人以希望 现在所在的这片风景 美丽的原因就在于… 认真度过的每一天</p>
+</li>
+<li><p>E17 春天是美丽的 因为我们度过了严寒的冬天 青春… 经历了春,夏,秋,冬后 变得更加坚强</p>
+</li>
+<li><p>E18 想要走得快就一个人走 想要走得远 就要一起走 有能够和自己一起远行的朋友…青春不会孤独</p>
+</li>
+<li><p>E19 今天我们心中非常充实 虽然这是叫人忙得不停的一天… 但这却是为了让明天更加闪亮 所以我们做得格外努力</p>
+</li>
+<li><p>E20 所谓的人生就是牛步千里 像牛一样慢慢地、默默地… 并且必须坚持自己选择的路一直走下去 我们今天也在这条道路上学到了生命的意义</p>
+</li>
+<li><p>E21 青春就是 无穷无尽的学习之旅 我们要生活下去 所以必须得一直学习 为什么? 人生中会看到各种各样的风景 那就是一次学习的旅程</p>
+</li>
+<li><p>E22 青春 轻易放弃的话 就不是珍贵的东西 所谓的人生每一个瞬间 最美丽的汗水流淌着… 每一个瞬间都必须要充实 永远的现在进行时 将它和人生这个单词所有的寓意系在一起的时候 就成为了回忆，今天我们又创造了一个伴随我们一生的回忆</p>
+</li>
+<li><p>E23 青春的特权是 可以失误 但对于我们 虽然有失误 但绝没有失败 我们一面经历着曲折 一面获得新的领悟 因为人生必定在其中获得成长</p>
+</li>
+<li><p>E24 经历了冬季和春季的翠绿的山野菜 是经历了风雪严寒考验的作品 世上最为清香的等待 为了青春的春天 我们今天也在 培育着 新破土而出的嫩芽</p>
+</li>
+<li><p>E25 在生活的田地上撒上热情的种子 结出幸福的果实 幸福 不是某一天突然找来的客人 这朴素的日常生活所编织而成的回忆 永远不要忘记</p>
+</li>
+<li><p>E26 钟民就是 空白的头脑和纯洁的微笑 耀眼的白纸结晶体 面对世上的偏见和艺能的竞争 一步步向前…</p>
+</li>
+<li><p>E27 为了在今后仅以青春二字 就足以使心脏极速跳动的人生 在更晚之前击碎，击倒，疯狂吧 青春就是在能像与现实的界限之间 一页，一页，书写历史的过程</p>
+</li>
+<li><p>E28 对青春来说 人生中绝对不会失败的一种方法是不去面对挑战 比起害怕受伤来说 请你遗憾没有去面对挑战 年轻的好 是因为有挑战的机会</p>
+</li>
+<li><p>E29 青春啊 人生就像辣椒酱 为了浓厚的味道 需要不断的努力和精心还有长久的等待 时间流逝后辣椒酱发酵后才会有味道一样 人生也会在等待后顿悟其珍贵</p>
+</li>
+<li><p>E30 青春啊 是先走近一步 打开心扉的勇气 即使是小东西也要一起分享的细致 虽然没开口 但明白自己想要的 碰面时给予力量的欢乐的微笑 就这样友情从小地方生根发芽</p>
+</li>
+<li><p>E31 青春啊 就像一张白纸两个人一起抬更轻松一样 因为有大家的陪伴我们才能欢笑 在紧握的手中汗水 还有土地的意义 在能够寻找到其中意义的今天 希望你能把一起的珍贵价值深藏在心底</p>
+</li>
+<li><p>E32 有聚必有散 相聚之后必定会有离别 就像没有永远的相聚一样 也没有永远的离别 我们的回忆是美丽的回忆 今天的再见是为了又一次的相聚 青春的时光会永远停留在我们的心中</p>
+</li>
+<li><p>E33 青春就是 在第一次见面的时候给予了两种礼物 新见面的激动和刺激好奇心的陌生 今天与牵起你手的人们 分享激动 让陌生变成回忆 因为堂堂的你就是青春</p>
+</li>
+<li><p>E34 青春是 在制造新的因缘的时候 不需要太多条件 心动是遇见的开始 一起的时间是充分条件 敞开你的胸怀就会成为朋友 找新朋友是 人生的祝福</p>
+</li>
+<li><p>E35 一起的期间 渐渐染上的东西 因为谁 染上的东西 那是青春的特惠 光彩 转移到另一个人 光想着心就变红的事 青春 不管现在是什么风景 是和谁一起度过</p>
+</li>
+<li><p>E36 青春是 比起肩膀上的军装备更重的 即使是体验到生活的压力也 促使着不断前进的力量是 和谁一起走着的事实 今天一起的朋友是世上最坚强的武器</p>
+</li>
+<li><p>E37 青春啊 有时向陌生的环境投入自己 会发现有些事物虽然很小但意义很大 在陌生中也能感受到熟悉的温气恋人 将比今天开的更加明亮的耀眼的明天 为了逗留 懂得离开是青春的力量</p>
+</li>
+<li><p>E38 在同一空间 学会了如何一起欢笑 以甜美的微笑 学会了如何统一心灵的温度 身处异地 更上一层楼的我们 让青春更加灿烂 让我们享受幸福时光</p>
+</li>
+<li><p>E39 青春啊 土地是不会说谎的 尽管费尽心思 流尽汗水 但终将有回报 努力是养育肥沃土地的肥料 真诚是经得起时间考验的生命力 在这片土地上开花结果 就像青春的瞬间一样美丽</p>
+</li>
+<li><p>E40 青春啊 能在酷热的阳光下都能坚持的 唯一的理由是 度过了春花的香气 也熬过了夏天的酷热 是因为青春的果实在成熟着</p>
+</li>
+<li><p>E41 青春啊 一场春梦 即使失去了对于春天的梦 我们一起的 夏天晚上的梦 会永远记着</p>
+</li>
+<li><p>E42 青春啊 虽然约定是容易做出的 但保守那个是不容易的 起步的勇气 不动摇的意志 还有忍耐 果实是在漫长过程中等待的 所以更加有价值 今天我们也依然用汗珠遵守约定</p>
+</li>
+<li><p>E43 青春啊 有着耕好的土地和播好种子的G7来说 一望无际的等待也是幸福的延续 在夏天流的汗水和不知不觉中熟悉的土味 只给他们许可的青春的秋天要到来了</p>
+</li>
+<li><p>E44 青春是 付出多少 能够收获多少 一起度过多少时间 留下多少汗水 果实就成长多少 今天我们尝到了叫作正直的果实</p>
+</li>
+<li><p>E45 现在的试炼什么都不是 向着开始的心情和丰盛的果实 还有想着真诚的手… 现在的试炼是为了把自己变强</p>
+</li>
+<li><p>E46 为了分享情而踏上的路那条路上遇见了无数的人 如同给予满载的温暖的手赋予感动的情 如剪刀一般犀利的人生 会在心中满怀着感恩走下去</p>
+</li>
+<li><p>E47 总是灿烂的爷爷的微笑 满满的感动 什么时候都是温暖的奶奶的样子 人们生活中令人安心的避风港 今天留下的情 是一个家族得到的礼物</p>
+</li>
+<li><p>E48 青春 是用心感受走进身边的秋日的眩晕 怀着同样的记忆和朋友们一起期待这个秋季 心中最为感叹的是在我身边珍贵的人们</p>
+</li>
+<li><p>E49 红薯旁边 为了获得一个红薯 比起从春天开始G7那样滴落的汗水 在曾经无比辛劳过的 去年夏天后面的那条路上 现在享受着收获的喜悦 自己种植的红薯哟 长的这样胖乎乎的 熬过了那样悠长炎热的夏天啊</p>
+</li>
+<li><p>E50 在需要的地方 现在马上伸出手 虽然生疏 学习就行 虽然辛苦 微笑就行 虽然补充的只有1% 但是有100%完成的幸福 虽然负重生活 但是身边的朋友就是力量</p>
+</li>
+<li><p>E51 我们的幸福时光，1年 相互看着笑着 渐渐相似的我们 激动的心情准备了特别的见面 火热的胸膛拥抱着我许久未见的好友 一年前的今天在脑海中浮现</p>
+</li>
+<li><p>E52 陌生和 初次相遇时的风景 所有紧张且生疏的经历总是重复出现 不知不觉 我也成为了其中的一个风景 手中紧握着的习惯也逐渐增长 和你们一起的1年里 拥有了长久的朋友和心中温暖的<br>记忆 青春是不会失败的</p>
+</li>
+<li><p>E53 青春 是遇到不可知的问题 也会全身心的迎难而上 寻找只属于我的正解是青春的特权 在寻找答案的路上 我们一起成长</p>
+</li>
+<li><p>E54 青春是 还没有来临的 总是能让人享受的 虽然现在手中握住的仅仅只是一只小蒲篮 只要拥有分享的心和热情的胸怀 青春和梦想 就不再是附属品</p>
+</li>
+<li><p>E55 酱的成熟是自然的造化 好的材料 阳光和空气 真诚老道的手法 才知道，就像完成的清淡的酱味一样 人生真正的味道 度过了艰难忍耐的时间 醇厚的香味才会散发出来</p>
+</li>
+<li><p>E56 百折不挠 绝不停止挑战的样子 如此美丽 孤军奋战 即使失败也不会冷酷 即使感到失去自信 苦尽甘来 什么样的成功也不会尝到今日般的滋味</p>
+</li>
+<li><p>E57 一起经历的昨天已经丰富了今天 一滴一滴的汗水成为了讨人喜欢的果实 我们 今天 收获到了叫做分享的快乐的礼物</p>
+</li>
+<li><p>E58 2009年10月23日 青春不败初次来到了偶像村 自给自足的生活 1年2个月的珍贵的时间 就这样 我们的青春开始了 泪水和土地的意义 用整个身体感受学习了1年的农活 陌生初步的农匠们 慢慢地体会着农活韵味 在一起收获的开心 插秧，除草，还有…… 1年农事的果实 众望的秋收 把不可能完成的农活 变为可能的让人感谢的帮手们 我人生初次做过的数万件事情 汗水的正值感和学习感谢的方法 有时 会很自豪的我们 随着时间的流逝 整整齐齐地堆积起来的我们的回忆 给我们幸福的 另一个家族 幼稚，灿烂 每个早晨 抱着礼物的青春，不败 还有小兰 一生难以忘怀的珍贵的姻缘 温暖的情，珍贵的时间 在青春的一页中 再见是另一个开始 约定再次相见的日期</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2018/12/05/Ubuntu-Docker%E5%AE%89%E8%A3%85/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/12/05/Ubuntu-Docker%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">Ubuntu Docker安装</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-05 16:51:49" itemprop="dateCreated datePublished" datetime="2018-12-05T16:51:49+08:00">2018-12-05</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2018/12/05/Ubuntu-Docker%E5%AE%89%E8%A3%85/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/05/Ubuntu-Docker安装/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>记录下Docker安装步骤。使用清华源</p>
+<h4 id="更新APT"><a href="#更新APT" class="headerlink" title="更新APT"></a>更新APT</h4><p>apt 源使用 HTTPS 以确保软件下载过程中不被篡改。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure>
+
+<p>需要添加软件源的 GPG 密钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository \</span><br><span class="line">    <span class="string">&quot;deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \</span></span><br><span class="line"><span class="string">    <span class="subst">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">    stable&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="安装-Docker-CE"><a href="#安装-Docker-CE" class="headerlink" title="安装 Docker CE"></a>安装 Docker CE</h4><p>安装 docker-ce</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+
+<h4 id="脚本安装"><a href="#脚本安装" class="headerlink" title="脚本安装"></a>脚本安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh --mirror Aliyun</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2018/03/30/Java%E4%B8%ADOptional%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/03/30/Java%E4%B8%ADOptional%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">Java中Optional的使用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-30 16:51:49" itemprop="dateCreated datePublished" datetime="2018-03-30T16:51:49+08:00">2018-03-30</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2018/03/30/Java%E4%B8%ADOptional%E7%9A%84%E4%BD%BF%E7%94%A8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/30/Java中Optional的使用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>升级SpringBoot2之后SpringData也一并升级到了2.0.5，之前的CrudRepository提供的默认实现很多都采用了Optional的方式，致使之前业务代码中的null处理显得很尴尬，在迁移过程中记录整理下Optional的一些使用。</p>
+</blockquote>
+<p>NPE作为Java中最著名的梗已无需多言，Java8之后提供了Optional的方式来对其进行处理，毕竟Java作为一个大龄语言，没有Elvis之类的特殊语法或运算符来处理null这种类型（结果），加入Optional这种语法糖也算是一点点进步。</p>
+<p>以实际中SpringData的一些操作为例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传统方式</span></span><br><span class="line"><span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> userRepository.findById(<span class="number">1L</span>);</span><br><span class="line"><span class="keyword">if</span> (user == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;user not exists&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//伪优化</span></span><br><span class="line">Optional&lt;User&gt; optional = userRepository.findById(<span class="number">1L</span>);</span><br><span class="line"><span class="keyword">if</span> (!optional.isPresent()) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;user not exists&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//优雅一点的方式（已抛出业务异常为例）</span></span><br><span class="line"><span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> userRepository.findById(<span class="number">1L</span>).orElseThrow(() -&gt; <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;User not exists&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>在获取对象内容时减少形如<code>if(user != null)</code>这样的判断</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String <span class="title function_">getName</span><span class="params">(User user)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> Optional.ofNullable(user).map(u -&gt; u.getNickname()).orElse(<span class="string">&quot;默认昵称&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2018/03/23/%E7%BC%96%E7%A8%8B-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%AE%B5%E5%AD%90/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/03/23/%E7%BC%96%E7%A8%8B-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%AE%B5%E5%AD%90/" class="post-title-link" itemprop="url">编程&amp;软件开发段子</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-23 16:51:49" itemprop="dateCreated datePublished" datetime="2018-03-23T16:51:49+08:00">2018-03-23</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">杂文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2018/03/23/%E7%BC%96%E7%A8%8B-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%AE%B5%E5%AD%90/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/23/编程-软件开发段子/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>收集些编程&amp;软件开发领域的一些概念或者论述，不知道怎么定义这些有意思的小句子，暂且命名为段子好了。</p>
+</blockquote>
+<p>Joe老爷子的似乎一直都蛮多</p>
+<ul>
+<li><p>programming is not about code, it’s about understanding.</p>
+</li>
+<li><p>everything is a process.</p>
+</li>
+<li><p>process creation and destruction is a lightweight operation.</p>
+</li>
+<li><p>message passing is the only way for processes to interact.</p>
+</li>
+<li><p>processes have unique names.</p>
+</li>
+<li><p>if you know the name of a process you can send it a message.</p>
+</li>
+<li><p>processes share no resources.</p>
+</li>
+<li><p>error handling is non-local.</p>
+</li>
+<li><p>processes do what they are supposed to do or fail.</p>
+</li>
+</ul>
+<p>Martin Fowler的很多论述也是一语中的</p>
+<ul>
+<li>one of the challenges of software development is that you can only make decisions based on the imperfect information that you currently have to hand</li>
+</ul>
+<hr>
+<ul>
+<li><p>程序员知道种种优势，却对代价一无所知。</p>
+</li>
+<li><p>经常失败。早点失败。快速失败。拥抱失败是走向成功的一种方式。不要害怕失败，要学会接受失败。(接受失败不是一件容易的事情，因为沉没成本往往会错误指导你的下一步决策)</p>
+</li>
+<li><p>所有软件系统都可以分解为两个主要元素：策略和细节。策略元素包含所有业务规则和过程。策略是系统的真正价值所在。</p>
+</li>
+<li><p>而细节是使人类、其他系统和程序员能够与策略进行通信的必备基础，但是这些细节都不会影响策略的行为。细节包括 IO 设备、数据库、Web 系统、服务器、框架、通信协议等等。</p>
+</li>
+<li><p>架构师的目标是为系统创建一个外形。这个外形将策略看做是系统中最重要的元素，同时做到细节与策略无关。这使得有关细节的决策可以延迟和推后。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2018/03/16/Ubuntu-Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/03/16/Ubuntu-Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Ubuntu_Java环境配置</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-16 16:51:49" itemprop="dateCreated datePublished" datetime="2018-03-16T16:51:49+08:00">2018-03-16</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2018/03/16/Ubuntu-Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/16/Ubuntu-Java环境配置/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>目前生产环境和测试环境机器使用都是JDK8，阿里云新增机器也统一使用Ubuntu16.04，记录下其中Java环境的安装。</p>
+<h3 id="安装Default-JRE-x2F-JDK"><a href="#安装Default-JRE-x2F-JDK" class="headerlink" title="安装Default JRE&#x2F;JDK"></a>安装Default JRE&#x2F;JDK</h3><p>Ubuntu上最快捷方便的方式是直接使用已经被打包进来的JDK，当前默认是OpenJDK 8，虽然因为各种原因我并没有使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install default-jre</span><br><span class="line">sudo apt-get install default-jdk</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Oracle-JDK"><a href="#安装Oracle-JDK" class="headerlink" title="安装Oracle JDK"></a>安装Oracle JDK</h3><p>如果想通过apt的方式来安装Oracle JDK，需要增加Oracle的PPA。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br></pre></td></tr></table></figure>
+
+<h3 id="管理Java版本"><a href="#管理Java版本" class="headerlink" title="管理Java版本"></a>管理Java版本</h3><p>假如我们机器上安装了多个Java版本，很有可能需要对他们进行一下管理或者切换。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure>
+<p>然后根据提示选择列表里我们需要的版本，切换它为默认的Java环境</p>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br><span class="line">JAVA_HOME=<span class="string">&quot;/usr/lib/jvm/java-8-oracle&quot;</span></span><br><span class="line"><span class="built_in">source</span> /etc/environment</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$JAVA_HOME</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">迟来的总结</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-03-06 16:51:49" itemprop="dateCreated datePublished" datetime="2017-03-06T16:51:49+08:00">2017-03-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">杂文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/06/迟来的总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>16到17的过渡，基本是在一种混沌的状态中进行的，换工作，换岗位，换角色，不停的转变，然后一直感觉找不到定位是什么，角色是什么，第一次感觉好像自己适应能力不怎好，也许是在能力以及职业生涯的发展是遇到了一个瓶颈，然而确找不到立马能够见效的方法去突破，所以变的有些浮躁亦有些盲目，简单的说就是最近真是迷，各种都不怎么在状态。可能是时候需要静下心来，好好总结下过去的一年，以及工作以来的状态和杂七杂八的，算是总结，也算是一个计划。</p>
+<p>从全职实习开始，工作3年，涉及的内容主要以数据挖掘、服务端为主，语言涉及<code>Java Python R C C++ Ruby Go Lua Scala</code>，主力语言基本是Java，其他语言算是为了完成某项特定需求的工具，不敢妄言说熟练，只是能用来解决问题，大规模工程化自己心里似乎也没底。涉及到的技术内容基本涵盖了当今互联网的热门内容，机器学习、数据库、服务端相关、数据平台开发、视觉计算、前端、运维、自动化测试，其他平时随便了解的内容就暂且不提。</p>
+<p>去年也开始了作为Team Leader带领团队，软件团队涉及前端、服务端、客户端、测试、算法，可能这一年的leader的经历是近几年来各方面成长最大的。一方面作为leader需要对各方面都需要有一定的了解，技术上拓展了各方面的能力，为了整个服务的稳定，同时作为DevOps的团队也对数据库、运维等等各方面都有了比较系统和深入的研究，另一方面和其他团队的沟通增多，也更多的需要站在整个团队或公司这个角度来看问题，而不仅仅是作为一个工程人员，跳出某个角色的局限后可能确实能够真正的发现很多问题的根本原因，找到很多事情的本质所在，对于敏捷和软件工程算是真正有了切身的体会，也体会到了软件工程中很多理论、方法的真正目的所在，算是真的理论联系了实际，可能真的算是真正非技术方面提高最大的一段时间了。</p>
+<p>从技术上来说，基本算是杂乱的状态，各方面都有一些经验，能够实际上手，但是真的要深入还需要研究和学习，貌似也因为自己一直处在创业公司的环境中的原因，很多事情都需要自己动手来做，后面带团队大技术方案、问题也需要多各方面内容都有所了解，然后就更加杂了，慢慢的也意识到在有的角色上这个是优点，在某些时候可能也是一个软肋，所以今年在保证足够广的知识面的前提下，找几个方向能够深入进行研究和学习，在现阶段工作有些打不开局面的情况下，可能是一个比较急需着手进行的目标了。</p>
+<p>从细的方面说，杂乱的技术栈中比较感兴趣的，同时也涉及到吃饭问题的，最主要的就是整个服务端和架构的内容，说的小点就是Java相关、数据库、系统设计。</p>
+<ol>
+<li>设计问题更多需要结合业务场景、团队配置、以及其他各种资源情况，所以更多是需要平时通过文章、分享、讲座来逐步基本，更多是科普和实践相结合的过程。</li>
+<li>Java涉及的东西感觉用一篇文章也不够列的，所以先从经常会忘的，以及确实在一些方面对自己有用的入手。<strong>JDK源码、JAVA8JDK的改进、总结每次新学的技术</strong></li>
+<li>数据库虽然有了RDS这样的东西，运维方面相比以前已经少了很多的工作量，但很多基本概念时间长了会搞混，而且对于MySQL的熟悉程度，也只是介入掌握和熟悉之间，需要真正的深入研究思考，主要是了解很多事情这样的是为什么，明白很多原则的背后原因和机制。<strong>高性能MySQL、数据库索引设计与优化</strong></li>
+<li>现在自己能用来解决问题的语言好多，没事干瞎折腾了解下能写下hello world的又是一堆，然而真的能理直气壮说是第二语言的好像还真没有，一方面可能是平时使用有关，另一方面可能是不够专一。<strong>学习两门新的语言，目的是去了解其中的特性，及设计上的思路，同时能够用来解决问题，暂定Go、Scala、Swift、NodeJS(好像不能算语言)中挑，进行实践写小项目什么的</strong></li>
+<li>对于大项目的设计和掌控力不够好，同时对很多项目的了解不够深入，找几个大小适中的项目源码进行分析学习。目的是学习其中好的设计方法，实现方法，以及项目的演变过程。<strong>暂定log4j2、jetty、Tomcat</strong></li>
+</ol>
+<p>乱乱的总结了下，草草的计划了下，让自己工作能够踏实点、学习能够专一点，路要一步步走、饭要一口口吃。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2017/02/27/Two-Sum/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/02/27/Two-Sum/" class="post-title-link" itemprop="url">Two Sum</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-02-27 16:51:49" itemprop="dateCreated datePublished" datetime="2017-02-27T16:51:49+08:00">2017-02-27</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/02/27/Two-Sum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/27/Two-Sum/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>开始整理下自己之前在LeetCode上的一些题解，每天再做一些。</p>
+</blockquote>
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>Example:</p>
+<p>Given nums &#x3D; [2, 7, 11, 15], target &#x3D; 9,</p>
+<p>Because nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9,</p>
+<p>return [0, 1].</p>
+<p>解法： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] twoSum(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">        		<span class="type">int</span>[] result = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">		Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (map.containsKey(target - nums[i])) &#123;</span><br><span class="line">				result[<span class="number">1</span>] = i;</span><br><span class="line">				result[<span class="number">0</span>] = map.get(target - nums[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			map.put(nums[i], i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot; aria-label&#x3D;&quot;下一页&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="Freedom"/>
+            
+              <p class="site-author-name" itemprop="name">Freedom</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/crl_228" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;crl_228" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:crl228123@gmail.com" title="E-Mail &amp;rarr; mailto:crl228123@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mrdream24.github.io/" title="http:&#x2F;&#x2F;mrdream24.github.io&#x2F;" rel="noopener" target="_blank">mrdream24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://nicksxs.me/" title="http:&#x2F;&#x2F;nicksxs.me&#x2F;" rel="noopener" target="_blank">nick</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Freedom</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v6.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://x20a.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

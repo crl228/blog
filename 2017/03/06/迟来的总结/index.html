@@ -1,23 +1,947 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/favicon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/uploads/favicon.png?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="16到17的过渡，基本是在一种混沌的状态中进行的，换工作，换岗位，换角色，不停的转变，然后一直感觉找不到定位是什么，角色是什么，第一次感觉好像自己适应能力不怎好，也许是在能力以及职业生涯的发展是遇到了一个瓶颈，然而确找不到立马能够见效的方法去突破，所以变的有些浮躁亦有些盲目，简单的说就是最近真是迷，各种都不怎么在状态。可能是时候需要静下心来，好好总结下过去的一年，以及工作以来的状态和杂七杂八的，算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迟来的总结">
+<meta property="og:url" content="https://x20a.com/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="To Be A Coder">
+<meta property="og:description" content="16到17的过渡，基本是在一种混沌的状态中进行的，换工作，换岗位，换角色，不停的转变，然后一直感觉找不到定位是什么，角色是什么，第一次感觉好像自己适应能力不怎好，也许是在能力以及职业生涯的发展是遇到了一个瓶颈，然而确找不到立马能够见效的方法去突破，所以变的有些浮躁亦有些盲目，简单的说就是最近真是迷，各种都不怎么在状态。可能是时候需要静下心来，好好总结下过去的一年，以及工作以来的状态和杂七杂八的，算">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-03-06T08:51:49.000Z">
+<meta property="article:modified_time" content="2017-03-06T08:51:49.000Z">
+<meta property="article:author" content="Freedom">
+<meta property="article:tag" content="杂文">
+<meta property="article:tag" content="总结">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+  <link rel="canonical" href="https://x20a.com/2017/03/06/迟来的总结/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>迟来的总结 | To Be A Coder</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">To Be A Coder</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
   </div>
 
-{% endblock %}
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-th&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://x20a.com/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Freedom"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/uploads/avatar.png"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="To Be A Coder"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">迟来的总结
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-03-06 16:51:49" itemprop="dateCreated datePublished" datetime="2017-03-06T16:51:49+08:00">2017-03-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">杂文</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/06/迟来的总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>16到17的过渡，基本是在一种混沌的状态中进行的，换工作，换岗位，换角色，不停的转变，然后一直感觉找不到定位是什么，角色是什么，第一次感觉好像自己适应能力不怎好，也许是在能力以及职业生涯的发展是遇到了一个瓶颈，然而确找不到立马能够见效的方法去突破，所以变的有些浮躁亦有些盲目，简单的说就是最近真是迷，各种都不怎么在状态。可能是时候需要静下心来，好好总结下过去的一年，以及工作以来的状态和杂七杂八的，算是总结，也算是一个计划。</p>
+<p>从全职实习开始，工作3年，涉及的内容主要以数据挖掘、服务端为主，语言涉及<code>Java Python R C C++ Ruby Go Lua Scala</code>，主力语言基本是Java，其他语言算是为了完成某项特定需求的工具，不敢妄言说熟练，只是能用来解决问题，大规模工程化自己心里似乎也没底。涉及到的技术内容基本涵盖了当今互联网的热门内容，机器学习、数据库、服务端相关、数据平台开发、视觉计算、前端、运维、自动化测试，其他平时随便了解的内容就暂且不提。</p>
+<p>去年也开始了作为Team Leader带领团队，软件团队涉及前端、服务端、客户端、测试、算法，可能这一年的leader的经历是近几年来各方面成长最大的。一方面作为leader需要对各方面都需要有一定的了解，技术上拓展了各方面的能力，为了整个服务的稳定，同时作为DevOps的团队也对数据库、运维等等各方面都有了比较系统和深入的研究，另一方面和其他团队的沟通增多，也更多的需要站在整个团队或公司这个角度来看问题，而不仅仅是作为一个工程人员，跳出某个角色的局限后可能确实能够真正的发现很多问题的根本原因，找到很多事情的本质所在，对于敏捷和软件工程算是真正有了切身的体会，也体会到了软件工程中很多理论、方法的真正目的所在，算是真的理论联系了实际，可能真的算是真正非技术方面提高最大的一段时间了。</p>
+<p>从技术上来说，基本算是杂乱的状态，各方面都有一些经验，能够实际上手，但是真的要深入还需要研究和学习，貌似也因为自己一直处在创业公司的环境中的原因，很多事情都需要自己动手来做，后面带团队大技术方案、问题也需要多各方面内容都有所了解，然后就更加杂了，慢慢的也意识到在有的角色上这个是优点，在某些时候可能也是一个软肋，所以今年在保证足够广的知识面的前提下，找几个方向能够深入进行研究和学习，在现阶段工作有些打不开局面的情况下，可能是一个比较急需着手进行的目标了。</p>
+<p>从细的方面说，杂乱的技术栈中比较感兴趣的，同时也涉及到吃饭问题的，最主要的就是整个服务端和架构的内容，说的小点就是Java相关、数据库、系统设计。</p>
+<ol>
+<li>设计问题更多需要结合业务场景、团队配置、以及其他各种资源情况，所以更多是需要平时通过文章、分享、讲座来逐步基本，更多是科普和实践相结合的过程。</li>
+<li>Java涉及的东西感觉用一篇文章也不够列的，所以先从经常会忘的，以及确实在一些方面对自己有用的入手。<strong>JDK源码、JAVA8JDK的改进、总结每次新学的技术</strong></li>
+<li>数据库虽然有了RDS这样的东西，运维方面相比以前已经少了很多的工作量，但很多基本概念时间长了会搞混，而且对于MySQL的熟悉程度，也只是介入掌握和熟悉之间，需要真正的深入研究思考，主要是了解很多事情这样的是为什么，明白很多原则的背后原因和机制。<strong>高性能MySQL、数据库索引设计与优化</strong></li>
+<li>现在自己能用来解决问题的语言好多，没事干瞎折腾了解下能写下hello world的又是一堆，然而真的能理直气壮说是第二语言的好像还真没有，一方面可能是平时使用有关，另一方面可能是不够专一。<strong>学习两门新的语言，目的是去了解其中的特性，及设计上的思路，同时能够用来解决问题，暂定Go、Scala、Swift、NodeJS(好像不能算语言)中挑，进行实践写小项目什么的</strong></li>
+<li>对于大项目的设计和掌控力不够好，同时对很多项目的了解不够深入，找几个大小适中的项目源码进行分析学习。目的是学习其中好的设计方法，实现方法，以及项目的演变过程。<strong>暂定log4j2、jetty、Tomcat</strong></li>
+</ol>
+<p>乱乱的总结了下，草草的计划了下，让自己工作能够踏实点、学习能够专一点，路要一步步走、饭要一口口吃。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我喝☕️</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechat.png" alt="Freedom 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.png" alt="Freedom 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%9D%82%E6%96%87/" rel="tag"># 杂文</a>
+          
+            <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/27/Two-Sum/" rel="next" title="Two Sum">
+                <i class="fa fa-chevron-left"></i> Two Sum
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/16/Ubuntu-Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="prev" title="Ubuntu_Java环境配置">
+                Ubuntu_Java环境配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="Freedom"/>
+            
+              <p class="site-author-name" itemprop="name">Freedom</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/crl_228" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;crl_228" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:crl228123@gmail.com" title="E-Mail &amp;rarr; mailto:crl228123@gmail.com" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-envelope&quot;&gt;&lt;&#x2F;i&gt;E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mrdream24.github.io/" title="http:&#x2F;&#x2F;mrdream24.github.io&#x2F;" rel="noopener" target="_blank">mrdream24</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://nicksxs.me/" title="http:&#x2F;&#x2F;nicksxs.me&#x2F;" rel="noopener" target="_blank">nick</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Freedom</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v6.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://x20a.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://x20a.com/2017/03/06/%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%80%BB%E7%BB%93/";
+    this.page.identifier = "2017/03/06/迟来的总结/";
+    this.page.title = '迟来的总结';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://x20a.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
